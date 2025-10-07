@@ -11,7 +11,6 @@ Libraries and Keys
 #| output: false
 library(tidyverse)
 library(eia)
-library(zoo)
 eia_set_key(Sys.getenv("EIA_KEY"))
 ```
 
@@ -34,6 +33,7 @@ energy <- energy %>%
 
 glimpse(energy)
 ```
+
 Test graph
 
 ```{r}
