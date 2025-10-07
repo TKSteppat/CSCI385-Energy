@@ -1,5 +1,9 @@
 CSCI 385 - Energy group
 
+## EIA tips
+
+To pull from EIA using `eia_data()`, you need to have an API key from EIA stored in your environment variables. You can get these at https://www.eia.gov/opendata/
+
 ## 1. Pull the Latest Changes
 
 Always start by syncing your local repo:
