@@ -1,0 +1,41 @@
+---
+title: "EIA fetching"
+author: "Alejandro Barajas, Trevor Olmo, Shihan Embuldeniya, Tyler Steppat, and Gary Layman"
+format: pdf
+editor: visual
+---
+
+Libraries and Keys
+
+```{r}
+#| output: false
+library(tidyverse)
+library(eia)
+library(zoo)
+eia_set_key(Sys.getenv("EIA_KEY"))
+```
+
+Call API for desired data
+
+```{r}
+energy <- eia_data(
+  dir = "electricity/electric-power-operational-data",
+  data = c("ash-content", "consumption-for-eg", "consumption-for-eg-btu", "consumption-uto", "consumption-uto-btu", "cost", "cost-per-btu", "generation", "heat-content", "receipts", "receipts-btu", "stocks", "sulfur-content", "total-consumption", "total-consumption-btu"),
+  freq = "quarterly",
+  start = "2020",
+  end = "2025"
+)
+
+energy <- energy %>% 
+  mutate(
+    generation = as.integer(generation),
+    sectorid = as.integer(sectorid)
+  )
+
+glimpse(energy)
+```
+Test graph
+
+```{r}
+ggplot(energy, aes(x=sectorid, y=generation, color = location))+geom_line()
+```
