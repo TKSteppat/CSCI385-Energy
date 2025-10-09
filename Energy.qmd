@@ -1,6 +1,6 @@
 ---
 title: "Efficient green energy sources report"
-author: "Alejandro Barajas, Gary Layman, Add your names here"
+author: "Alejandro Barajas, Gary Layman, Trevor Olmo"
 date: today
 format: pdf
 editor: source
@@ -15,6 +15,8 @@ knitr::opts_chunk$set(echo = TRUE, eval = TRUE, results = "hold")
 library(tidyverse)
 library(reticulate)
 library(eia)
+library(dotenv)
+load_dot_env(file = ".env")
 eia_set_key(Sys.getenv("EIA_KEY"))
 
 # setup python environment
