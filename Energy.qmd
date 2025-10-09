@@ -1,0 +1,125 @@
+---
+title: "Efficient green energy sources report"
+author: "Alejandro Barajas, Add your names here"
+date: today
+format: pdf
+editor: source
+---
+
+# R and Python libary set up
+
+```{r}
+#| label: r setup
+#| include: false
+knitr::opts_chunk$set(echo = TRUE, eval = TRUE, results = "hold")
+library(tidyverse)
+library(reticulate)
+```
+
+```{python}
+#| label: python setup
+#| include: false
+import pandas as pd
+```
+
+- **Overall goal**
+The goal is to identify which sources deliver the most energy per dollar while minimizing environmental impact
+
+## Data Preparation
+```{r}
+# YOUR CODE HERE
+```
+
+```{python}
+# YOUR CODE HERE
+```
+### Data Collection & Cleaning
+- What sources are used?
+- What cleaning steps are necessary?
+```{r}
+# YOUR CODE HERE
+```
+
+```{python}
+# YOUR CODE HERE
+```
+### Data Organization & Conditioning
+- How is the data structured?
+- Are there transformations or feature engineering steps?
+```{r}
+# YOUR CODE HERE
+```
+
+```{python}
+# YOUR CODE HERE
+```
+### Data Storage
+- Where and how is the data stored?
+- Is it accessible and secure?
+```{r}
+# YOUR CODE HERE
+```
+
+```{python}
+# YOUR CODE HERE
+```
+## Exploratory Data Analysis (EDA)
+
+- What are the high-level patterns?
+- What intuitive insights emerge?
+- Is the data consistent across sources?
+- What assumptions are we making?
+- What new questions arise from the EDA?
+
+ **Note**: Be mindful of *confirmation bias*—avoid interpreting data only to support your initial hypothesis.
+```{r}
+# YOUR CODE HERE
+```
+
+```{python}
+# YOUR CODE HERE
+```
+## Model Planning
+
+- **Model Type**: Classification, clustering, regression—what fits best?
+- **Success/Failure Definitions**: Refine what constitutes a good or bad outcome.
+- **EDA for Modeling**:
+  - Identify relevant variables
+  - Explore correlations
+  - Apply domain knowledge
+  - Verify assumptions
+  - Prototype modeling ideas
+```{r}
+# YOUR CODE HERE
+```
+
+```{python}
+# YOUR CODE HERE
+```
+## Model Building
+
+- What models are being trained?
+- How are they tested?
+- What metrics are used to evaluate performance?
+```{r}
+# YOUR CODE HERE
+```
+
+```{python}
+# YOUR CODE HERE
+```
+## Communicating Results
+
+- Are the results **robust** across different scenarios?
+- Are they **statistically significant**?
+- Why do these results **matter** to stakeholders?
+- How do they compare to your definitions of success and failure?
+
+## Operationalization
+
+- **Presentation**:
+  - Who is the audience?
+  - Is the code and analysis well-documented and replicable?
+- **Deployment**:
+  - Are models deployed on live data?
+  - Are they behaving as expected?
