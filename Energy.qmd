@@ -1,6 +1,6 @@
 ---
 title: "Efficient green energy sources report"
-author: "Alejandro Barajas, Add your names here"
+author: "Alejandro Barajas, Gary Layman, Add your names here"
 date: today
 format: pdf
 editor: source
