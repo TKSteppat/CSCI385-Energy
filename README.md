@@ -1,5 +1,22 @@
 CSCI 385 - Energy group
 
+## Setup Python environment
+
+Needs requirements.txt to be populated
+
+Before running any code, in your terminal follow these next steps
+
+Create a new virtual environment for Python
+```bash
+python3 -m venv .venv
+```
+
+Activate your new environment by running the activation program for your system. These are located at `.venv/bin/`
+
+Then with the environment activated you can run `pip install requirements.txt` to update your environment
+
+Once this has been done once, you just need to follow the last two steps whenever `requirements.txt` is updated to keep up to date.
+
 ## 1. Pull the Latest Changes
 
 Always start by syncing your local repo:

@@ -16,6 +16,9 @@ library(tidyverse)
 library(reticulate)
 library(eia)
 eia_set_key(Sys.getenv("EIA_KEY"))
+
+# setup python environment
+use_virtualenv("./.venv")
 ```
 
 ```{python}
