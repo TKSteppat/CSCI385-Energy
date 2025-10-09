@@ -14,6 +14,8 @@ editor: source
 knitr::opts_chunk$set(echo = TRUE, eval = TRUE, results = "hold")
 library(tidyverse)
 library(reticulate)
+library(eia)
+eia_set_key(Sys.getenv("EIA_KEY"))
 ```
 
 ```{python}
@@ -27,7 +29,15 @@ The goal is to identify which sources deliver the most energy per dollar while m
 
 ## Data Preparation
 ```{r}
-# YOUR CODE HERE
+#| label: Fetch EIA data
+energy <- eia_data(
+  dir = "electricity/electric-power-operational-data",
+  data = c("ash-content", "consumption-for-eg", "consumption-for-eg-btu", "consumption-uto", "consumption-uto-btu", "cost", "cost-per-btu", "generation", "heat-content", "receipts", "receipts-btu", "stocks", "sulfur-content", "total-consumption", "total-consumption-btu"),
+  freq = "quarterly",
+  start = "2020",
+  end = "2025"
+)
+# All columns are <char> and will need to be cleaned
 ```
 
 ```{python}
