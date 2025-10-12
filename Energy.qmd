@@ -25,6 +25,8 @@ use_virtualenv("./.venv")
 #| label: python setup
 #| include: false
 import pandas as pd
+from glob import glob
+import os
 ```
 
 - **Overall goal**
@@ -33,13 +35,14 @@ The goal is to identify which sources deliver the most energy per dollar while m
 ## Data Preparation
 ```{r}
 #| label: Fetch EIA data
-energy <- eia_data(
-  dir = "electricity/electric-power-operational-data",
-  data = c("ash-content", "consumption-for-eg", "consumption-for-eg-btu", "consumption-uto", "consumption-uto-btu", "cost", "cost-per-btu", "generation", "heat-content", "receipts", "receipts-btu", "stocks", "sulfur-content", "total-consumption", "total-consumption-btu"),
-  freq = "quarterly",
-  start = "2020",
-  end = "2025"
-)
+#### Commented this out because we no longer need it
+# energy <- eia_data(
+# dir = "electricity/electric-power-operational-data",
+#  data = c("ash-content", "consumption-for-eg", "consumption-for-eg-btu", "consumption-uto", "consumption-uto-btu", "cost", "cost-per-btu", "generation", "heat-content", "receipts", "receipts-btu", "stocks", "sulfur-content", "total-consumption", "total-consumption-btu"),
+#  freq = "quarterly",
+#  start = "2020",
+#  end = "2025"
+#)
 # All columns are <char> and will need to be cleaned
 ```
 
@@ -49,22 +52,32 @@ energy <- eia_data(
 ### Data Collection & Cleaning
 - What sources are used?
 - What cleaning steps are necessary?
-```{r}
-# YOUR CODE HERE
-```
+
+We already scraped the data from the EIA website, so we can use that data directly. We just need to read it in from the csvs it has been saved in.
 
 ```{python}
 # YOUR CODE HERE
+#Find all csv files in the directory, read them in, and store them in a single df
+eia_csvs = glob("datasets/*.csv")
+dfs = [pd.read_csv(csv) for csv in eia_csvs]
+energy_df = pd.concat(dfs, ignore_index=True)
+energy_df.head()
 ```
+
 ### Data Organization & Conditioning
 - How is the data structured?
 - Are there transformations or feature engineering steps?
-```{r}
-# YOUR CODE HERE
-```
+
+Here I just check number of rows and columns, as well as the data types of the columns.
 
 ```{python}
 # YOUR CODE HERE
+# Number of rows
+print("Rows: ", energy_df.shape[0])
+# Number of columns
+print("Columns: ", energy_df.shape[1])
+#Data types
+energy_df.dtypes
 ```
 ### Data Storage
 - Where and how is the data stored?
