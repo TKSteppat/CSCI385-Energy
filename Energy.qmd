@@ -88,6 +88,8 @@ energy_df.dtypes
 
 ```{python}
 # YOUR CODE HERE
+energy_df["location"].unique()
+energy_df["location"].nunique()
 ```
 ## Exploratory Data Analysis (EDA)
 
