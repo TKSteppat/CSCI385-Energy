@@ -88,9 +88,15 @@ energy_df.dtypes
 
 ```{python}
 # YOUR CODE HERE
-energy_df["location"].unique()
-energy_df["location"].nunique()
+energy_df.isna().sum()
 ```
+
+```{python}
+# YOUR CODE HERE
+# limits to just where cost is NA and finds all the unique fuelTypeDescriptions
+energy_df[energy_df["cost"].isna()]["fuelTypeDescription"].unique()
+```
+
 ## Exploratory Data Analysis (EDA)
 
 - What are the high-level patterns?
@@ -106,6 +112,7 @@ energy_df["location"].nunique()
 
 ```{python}
 # YOUR CODE HERE
+
 ```
 ## Model Planning
 
