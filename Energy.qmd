@@ -68,7 +68,7 @@ energy_df.head()
 - How is the data structured?
 - Are there transformations or feature engineering steps?
 
-Here I just check number of rows and columns, as well as the data types of the columns.
+Here I just check number of rows and columns.
 
 ```{python}
 # YOUR CODE HERE
@@ -76,19 +76,42 @@ Here I just check number of rows and columns, as well as the data types of the c
 print("Rows: ", energy_df.shape[0])
 # Number of columns
 print("Columns: ", energy_df.shape[1])
+```
+
+
+Columns Types
+```{python} 
 #Data types
 energy_df.dtypes
 ```
+
+
 ### Data Storage
 - Where and how is the data stored?
 - Is it accessible and secure?
-```{r}
-# YOUR CODE HERE
-```
 
+Find the number of missing values in each column.
 ```{python}
 # YOUR CODE HERE
+energy_df.isna().sum()
 ```
+
+
+Shows the fuel types that have missing cost values
+```{python}
+# YOUR CODE HERE
+missing_cost = energy_df[energy_df["cost"].isna()]
+missing_cost["fuelTypeDescription"].unique()
+```
+
+
+Finds the counts for each fuel type
+```{python}
+# YOUR CODE HERE
+missing_cost["fuelTypeDescription"].value_counts()
+```
+
+
 ## Exploratory Data Analysis (EDA)
 
 - What are the high-level patterns?
@@ -104,6 +127,7 @@ energy_df.dtypes
 
 ```{python}
 # YOUR CODE HERE
+
 ```
 ## Model Planning
 
