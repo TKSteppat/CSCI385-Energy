@@ -1,6 +1,6 @@
 ---
 title: "Efficient green energy sources report"
-author: "Alejandro Barajas, Gary Layman, Trevor Olmo, Add your names here"
+author: "Alejandro Barajas, Gary Layman, Trevor Olmo, Tyler Steppat, Add your names here"
 date: today
 format: pdf
 editor: source
