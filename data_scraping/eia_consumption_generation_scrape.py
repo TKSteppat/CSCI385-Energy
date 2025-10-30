@@ -29,5 +29,5 @@ if __name__ == "__main__":
         # Simple print just so we can see the progress
         print(f"Scraped {offset*5000} rows out of {total}")
     # save to file
-    main_df.to_csv(f"datasets/eia_data.csv", index=False)
-    print(f"Saved to datasets/eia_data.csv")
+    main_df.to_csv(f"datasets/raw/eia_data.csv", index=False)
+    print(f"Saved to datasets/raw/eia_data.csv")
