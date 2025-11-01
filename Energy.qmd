@@ -30,7 +30,7 @@ import os
 ```
 
 - **Overall goal**
-The goal is to identify which sources deliver the most energy per dollar while minimizing environmental impact
+The goal is to perform a comparative analysis of energy sources to determine which produces the most energy per dollar while minimizing carbon emissions.
 
 ## Data Preparation
 ```{r}
@@ -50,8 +50,6 @@ The goal is to identify which sources deliver the most energy per dollar while m
 # YOUR CODE HERE
 ```
 ### Data Collection & Cleaning
-- What sources are used?
-- What cleaning steps are necessary?
 
 We already scraped the data from the EIA website, so we can use that data directly. We just need to read it in from the csvs it has been saved in.
 
@@ -65,8 +63,6 @@ energy_df.head()
 ```
 
 ### Data Organization & Conditioning
-- How is the data structured?
-- Are there transformations or feature engineering steps?
 
 Here I just check number of rows and columns.
 
@@ -87,8 +83,6 @@ energy_df.dtypes
 
 
 ### Data Storage
-- Where and how is the data stored?
-- Is it accessible and secure?
 
 Find the number of missing values in each column.
 ```{python}
