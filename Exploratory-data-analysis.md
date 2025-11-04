@@ -2,32 +2,32 @@
 
 ## Data summary
 1.) Number of rows:  <br>
-2.) number of duplicate rows:
-3.) Number of features (Columns):
-4.) Data types of each feature: 
+2.) number of duplicate rows: <br>
+3.) Number of features (Columns): <br> 
+4.) Data types of each feature: <br>
 
 ## Statistical summary
-1.) Measures of central tendency (mean, median):
-2.) Measures of dispersion (standard deviation, value range):
-3.) min/max values:
-4.) count of missing values:
-5.) outliers:
-6.) summary stats per feature
+1.) Measures of central tendency (mean, median): <br>
+2.) Measures of dispersion (standard deviation, value range): <br>
+3.) min/max values: <br>
+4.) count of missing values:  <br>
+5.) outliers:  <br>
+6.) summary stats per feature:  <br>
 
 ## Distribution analysis
-1.) Distribution shape (normal, skewed, bimodal, etc):
-2.) Features with heavy tails or long skews:
-3.) Categorial features with imbalanced class distributions:
-4.) Features with missing values or zero values
+1.) Distribution shape (normal, skewed, bimodal, etc):  <br>
+2.) Features with heavy tails or long skews:  <br>
+3.) Categorial features with imbalanced class distributions:  <br>
+4.) Features with missing values or zero values  <br>
 
 ## Feature assessment
-1.) Strong correlations between features:
-2.) highly colinear features:
-3.) Features with high cardinality that may need encoding:
-4.) Inconsistent units:
-5.) derived variables:
+1.) Strong correlations between features:  <br>
+2.) highly colinear features:  <br>
+3.) Features with high cardinality that may need encoding:  <br>
+4.) Inconsistent units:  <br>
+5.) derived variables:  <br>
 
 ## Data quality evaluation
-1.) How much variation exists within each energy source (e.g., solar costs vary by location: 
-2.) Are the units consistent: 
-3.) Are there duplicate entries: 
+1.) How much variation exists within each energy source (e.g., solar costs vary by location:  <br>
+2.) Are the units consistent:  <br>
+3.) Are there duplicate entries:  <br>
