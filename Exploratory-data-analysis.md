@@ -1,7 +1,7 @@
 ### The goal of this is to provide the structure, patterns, and quality of the dataset.
 
 ## Data summary
-1.) Number of rows:
+1.) Number of rows:  <br>
 2.) number of duplicate rows:
 3.) Number of features (Columns):
 4.) Data types of each feature: 
