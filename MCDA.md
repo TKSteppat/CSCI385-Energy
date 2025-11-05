@@ -26,7 +26,7 @@ Select 3-5 energy sources to compare. Consider renewable and non-renewable optio
 5.) Option 5 (energy source): <br>
 
 ## Performance values
-Determine the performance values (Each criterion is likely to have its own performance value or the measure you can use for ranking it in comparison to other criteria.)
+Determine the performance values (Each criterion is likely to have its own performance value or the measure you can use for ranking it in comparison to other criteria.) <br>
 Option 1: 
 Criterion 1: <br>
 Criterion 2: <br>
