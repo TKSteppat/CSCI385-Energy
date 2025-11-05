@@ -5,7 +5,7 @@ Project Goal: Determine which energy source produces the most amount of energy p
 1.) Primary objective: 
 
 ## Criteria
-Establish 3 to 5 criteria (choose relevant to the goal. EX - Cost per kWh, carbon emissions, geographic suitability):
+Establish 3 to 5 criteria (choose relevant to the goal. EX - Cost per kWh, carbon emissions, geographic suitability): <br>
 1.) Criterion_name
 
 ## Criteria Weighting 
@@ -18,7 +18,7 @@ Assign importance weights to each criterion. Must total 100%. Consider: Is cost 
 Total (must equal 100%): <br>
 
 ## List the choices
-Select 3-5 energy sources to compare. Consider renewable and non-renewable options.
+Select 3-5 energy sources to compare. Consider renewable and non-renewable options. <br>
 1.) Option 1 (energy source): <br>
 2.) Option 2 (energy source): <br>
 3.) Option 3 (energy source): <br>
@@ -27,35 +27,35 @@ Select 3-5 energy sources to compare. Consider renewable and non-renewable optio
 
 ## Performance values
 Determine the performance values (Each criterion is likely to have its own performance value or the measure you can use for ranking it in comparison to other criteria.) <br>
-Option 1: 
+Option 1: <br>
 Criterion 1: <br>
 Criterion 2: <br>
 Criterion 3: <br>
 Criterion 4: <br>
 Criterion 5: <br>
 Data source(s): <br>
-Option 2: 
+Option 2: <br>
 Criterion 1: <br>
 Criterion 2: <br>
 Criterion 3: <br>
 Criterion 4: <br>
 Criterion 5: <br>
 Data source(s): <br>
-Option 3: 
+Option 3: <br>
 Criterion 1: <br>
 Criterion 2: <br>
 Criterion 3: <br>
 Criterion 4: <br>
 Criterion 5: <br>
 Data source(s): <br>
-Option 4: 
+Option 4: <br>
 Criterion 1: <br>
 Criterion 2: <br>
 Criterion 3: <br>
 Criterion 4: <br>
 Criterion 5: <br>
 Data source(s): <br>
-Option 5: 
+Option 5: <br>
 Criterion 1: <br>
 Criterion 2: <br>
 Criterion 3: <br>
@@ -65,7 +65,7 @@ Data source(s): <br>
 
 ## Choice Rating
 Before normalizing, rating each option for each criterion (1 = worst, 5 = best for beneficial). Rating your choices involves determining how each option compares to your criteria. A criterion such as price is a non-beneficial criterion, meaning that a lower value is preferable.
-Option 1: 
+### Option 1: 
 Criterion 1 rank: <br>
 Criterion 2 rank: <br>
 Criterion 3 rank: <br>
