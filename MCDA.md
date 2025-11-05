@@ -27,69 +27,64 @@ Select 3-5 energy sources to compare. Consider renewable and non-renewable optio
 
 ## Performance values
 Determine the performance values (Each criterion is likely to have its own performance value or the measure you can use for ranking it in comparison to other criteria.) <br>
-Option 1: <br>
+### Option 1: <br>
 Criterion 1: <br>
 Criterion 2: <br>
 Criterion 3: <br>
 Criterion 4: <br>
 Criterion 5: <br>
-Data source(s): <br>
-Option 2: <br>
+### Option 2: <br>
 Criterion 1: <br>
 Criterion 2: <br>
 Criterion 3: <br>
 Criterion 4: <br>
 Criterion 5: <br>
-Data source(s): <br>
-Option 3: <br>
+### Option 3: <br>
 Criterion 1: <br>
 Criterion 2: <br>
 Criterion 3: <br>
 Criterion 4: <br>
 Criterion 5: <br>
-Data source(s): <br>
-Option 4: <br>
+### Option 4: <br>
 Criterion 1: <br>
 Criterion 2: <br>
 Criterion 3: <br>
 Criterion 4: <br>
 Criterion 5: <br>
-Data source(s): <br>
-Option 5: <br>
+### Option 5: <br>
 Criterion 1: <br>
 Criterion 2: <br>
 Criterion 3: <br>
 Criterion 4: <br>
 Criterion 5: <br>
-Data source(s): <br>
 
 ## Choice Rating
 Before normalizing, rating each option for each criterion (1 = worst, 5 = best for beneficial). Rating your choices involves determining how each option compares to your criteria. A criterion such as price is a non-beneficial criterion, meaning that a lower value is preferable.
-### Option 1: 
+### Option 1: <br>
 Criterion 1 rank: <br>
 Criterion 2 rank: <br>
 Criterion 3 rank: <br>
 Criterion 4 rank: <br>
 Criterion 5 rank: <br>
-Option 2: 
+### Option 2: <br>
 Criterion 1 rank: <br>
 Criterion 2 rank: <br>
 Criterion 3 rank: <br>
 Criterion 4 rank: <br>
 Criterion 5 rank: <br>
-Option 3: 
+### Option 3: <br> 
 Criterion 1 rank: <br>
 Criterion 2 rank: <br>
 Criterion 3 rank: <br>
 Criterion 4 rank: <br>
 Criterion 5 rank: <br>
-Option 4: 
+### Option 4: <br>
 Criterion 1 rank: <br>
 Criterion 2 rank: <br>
 Criterion 3 rank: <br>
 Criterion 4 rank: <br>
 Criterion 5 rank: <br>
-Option 5: 
+### option 5: <br>
 Criterion 1 rank: <br>
 Criterion 2 rank: <br>
 Criterion 3 rank: <br>
@@ -97,32 +92,32 @@ Criterion 4 rank: <br>
 Criterion 5 rank: <br>
 
 ## Normalize performance values
-Beneficial criteria (higher is better): Performance Value ÷ Highest Value
-Option 1: 
+Beneficial criteria (higher is better): Performance Value ÷ Highest Value <br>
+### Option 1: <br>
 Criterion 1 normalized: <br>
 Criterion 2 normalized: <br>
 Criterion 3 normalized: <br>
 Criterion 4 normalized: <br>
 Criterion 5 normalized: <br>
-Option 2: 
+### Option 2: <br>
 Criterion 1 normalized: <br>
 Criterion 2 normalized: <br>
 Criterion 3 normalized: <br>
 Criterion 4 normalized: <br>
 Criterion 5 normalized: <br>
-Option 3: 
+### Option 3:  <br>
 Criterion 1 normalized: <br>
 Criterion 2 normalized: <br>
 Criterion 3 normalized: <br>
 Criterion 4 normalized: <br>
 Criterion 5 normalized: <br>
-Option 4: 
+### Option 4: <br>
 Criterion 1 normalized: <br>
 Criterion 2 normalized: <br>
 Criterion 3 normalized: <br>
 Criterion 4 normalized: <br>
 Criterion 5 normalized: <br>
-Option 5: 
+### Option 5: <br>
 Criterion 1 normalized: <br>
 Criterion 2 normalized: <br>
 Criterion 3 normalized: <br>
@@ -130,32 +125,32 @@ Criterion 4 normalized: <br>
 Criterion 5 normalized: <br>
 
 ## Weighted normalized values
-Multiply each normalized value by its criterion weight (as decimal). Example: If normalized = 0.67 and weight = 30%, then 0.67 × 0.30 = 0.201
-Option 1: 
+Multiply each normalized value by its criterion weight (as decimal). Example: If normalized = 0.67 and weight = 30%, then 0.67 × 0.30 = 0.201 <br>
+### Option 1: <br> 
 Criterion 1 weighted: <br>
 Criterion 2 weighted: <br>
 Criterion 3 weighted: <br>
 Criterion 4 weighted: <br>
 Criterion 5 weighted: <br>
-Option 2: 
+### Option 2: <br>
 Criterion 1 weighted: <br>
 Criterion 2 weighted: <br>
 Criterion 3 weighted: <br>
 Criterion 4 weighted: <br>
 Criterion 5 weighted: <br>
-Option 3: 
+### Option 3: <br>
 Criterion 1 weighted: <br>
 Criterion 2 weighted: <br>
 Criterion 3 weighted: <br>
 Criterion 4 weighted: <br>
 Criterion 5 weighted: <br>
-Option 4: 
+### Option 4: <br> 
 Criterion 1 weighted: <br>
 Criterion 2 weighted: <br>
 Criterion 3 weighted: <br>
 Criterion 4 weighted: <br>
 Criterion 5 weighted: <br>
-Option 5: 
+### Option 5: <br>
 Criterion 1 weighted: <br>
 Criterion 2 weighted: <br>
 Criterion 3 weighted: <br>
@@ -163,13 +158,13 @@ Criterion 4 weighted: <br>
 Criterion 5 weighted: <br>
 
 ## Calculate performance scores
-Sum all weighted values for each option. Highest score = best choice
+Sum all weighted values for each option. Highest score = best choice <br>
 1.) Option 1 total score: <br>
 2.) Option 2 total score: <br>
 3.) Option 3 total score: <br>
 4.) Option 4 total score: <br>
 5.) Option 5 total score: <br>
-Ranking:
+### Ranking:
 1st place: <br>
 2nd place: <br>
 3rd place: <br>
