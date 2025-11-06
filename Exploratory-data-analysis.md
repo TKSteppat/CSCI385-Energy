@@ -15,6 +15,17 @@ Sulfur Content (%)                       float64 <br>
 Total Consumption (millions of MMBtu)    float64 <br>
 Cost ($/MWh)                             float64 <br>
 Raw Cost (Millions of $)                 float64 <br>
+5.) feature descriptions:
+Year - The calendar year during which the data was recorded. Serves as the temporal reference for all other features. <br>
+State - The U.S. state where the energy data was collected. Useful for regional comparisons and geographic analysis. <br>
+fueltypeid - A categorical identifier for the fuel type used. The meaning of each ID is unclear; let's consider mapping it to descriptive labels using a lookup table or metadata source. <br>
+Ash Content (%) - The percentage of ash residue produced from fuel combustion. Indicates fuel quality and environmental impact. <br>
+Generation (Thousands of MWh) - The amount of electricity generated, measured in thousands of megawatt-hours. Reflects production scale. <br>
+Sulfur Content (%) - The percentage of sulfur in the fuel. High values may correlate with greater emissions and regulatory concerns. <br>
+Total Consumption (millions of MMBtu) - The total energy consumed, measured in millions of MMBtu (Million British Thermal Units). Useful for assessing demand and fuel usage. <br>
+Cost ($/MWh) - The cost of electricity generation per megawatt-hour. A key metric for economic efficiency.<br> 
+Raw Cost (Millions of $) - The total monetary cost of generation, measured in millions of dollars. Helps quantify financial investment or burden.<br>
+
 
 ## Statistical summary
 1.) Measures of central tendency (mean, median): <br>
@@ -26,12 +37,12 @@ Total Consumption (millions of MMBtu)      152.540228 <br>
 Cost ($/MWh)                                36.467761 <br>
 Raw Cost (Millions of $)                   412.940125 <br>
 ### median of each feature
-Ash Content (%)                             0.00000
-Generation (Thousands of MWh)            3023.10130
-Sulfur Content (%)                          0.00000
-Total Consumption (millions of MMBtu)      53.23042
-Cost ($/MWh)                               33.00000
-Raw Cost (Millions of $)                  131.60000
+Ash Content (%)                             0.00000 <br>
+Generation (Thousands of MWh)            3023.10130 <br> 
+Sulfur Content (%)                          0.00000 <br>
+Total Consumption (millions of MMBtu)      53.23042 <br>
+Cost ($/MWh)                               33.00000 <br>
+Raw Cost (Millions of $)                  131.60000 <br>
 2.) Measures of dispersion (standard deviation, value range): <br>
 3.) min/max values: <br>
 4.) count of missing values:  <br>
