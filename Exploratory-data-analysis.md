@@ -15,7 +15,7 @@ Sulfur Content (%)                       float64 <br>
 Total Consumption (millions of MMBtu)    float64 <br>
 Cost ($/MWh)                             float64 <br>
 Raw Cost (Millions of $)                 float64 <br>
-5.) feature descriptions:
+5.) feature descriptions: <br>
 Year - The calendar year during which the data was recorded. Serves as the temporal reference for all other features. <br>
 State - The U.S. state where the energy data was collected. Useful for regional comparisons and geographic analysis. <br>
 fueltypeid - A categorical identifier for the fuel type used. The meaning of each ID is unclear; let's consider mapping it to descriptive labels using a lookup table or metadata source. <br>
