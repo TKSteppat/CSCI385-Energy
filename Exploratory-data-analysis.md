@@ -44,11 +44,34 @@ Sulfur Content (%)                          0.00000 <br>
 Total Consumption (millions of MMBtu)      53.23042 <br>
 Cost ($/MWh)                               33.00000 <br>
 Raw Cost (Millions of $)                  131.60000 <br>
-2.) Measures of dispersion (standard deviation, value range): <br>
+2.) Measures of dispersion (standard deviation): <br>
+ Year                                         2.317104 <br>
+Ash Content (%)                              4.144487 <br>
+Generation (Thousands of MWh)            25199.190056 <br>
+Sulfur Content (%)                           1.107974 <br>
+Total Consumption (millions of MMBtu)      249.008661 <br>
+Cost ($/MWh)                                15.236307 <br>
+Raw Cost (Millions of $)                   923.799378 <br>
 3.) min/max values: <br>
-4.) count of missing values:  <br>
-5.) outliers:  <br>
-6.) summary stats per feature:  <br>
+Year -> Min: 2016.0, Max: 2023.0 <br>
+Ash Content (%) -> Min: 0.0, Max: 26.66 <br>
+Generation (Thousands of MWh) -> Min: -188.63227, Max: 256140.17982 <br>
+Sulfur Content (%) -> Min: 0.0, Max: 6.01 <br>
+Total Consumption (millions of MMBtu) -> Min: 0.00028, Max: 2324.03563 <br>
+Cost ($/MWh) -> Min: 13.25, Max: 122.5 <br>
+Raw Cost (Millions of $) -> Min: 0.0, Max: 14914.8 <br>
+4.) count of missing values: 0 <br>
+5.) outliers (This is useful for determining if a distribution is skewed): <br>
+Ash Content (%)                          178 <br>
+Cost ($/MWh)                              11 <br>
+Generation (Thousands of MWh)            104 <br>
+Raw Cost (Millions of $)                  60 <br>
+State                                      0 <br>
+Sulfur Content (%)                       115 <br>
+Total Consumption (millions of MMBtu)     62 <br>
+Year                                       0 <br>
+fuelTypeDescription                        0 <br>
+fueltypeid                                 0 <br>
 
 ## Distribution analysis
 1.) Distribution shape (normal, skewed, bimodal, etc):  <br>
