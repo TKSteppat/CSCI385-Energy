@@ -5,16 +5,17 @@
 2.) number of duplicate rows: None <br>
 3.) Number of features (Columns): 10 <br> 
 4.) Data types of each feature: <br>
-Year                                       int64 <br>
-State                                     object <br>
-fueltypeid                                object <br>
-fuelTypeDescription                       object <br>
-Ash Content (%)                          float64 <br>
-Generation (Thousands of MWh)            float64 <br>
-Sulfur Content (%)                       float64 <br>
-Total Consumption (millions of MMBtu)    float64 <br>
-Cost ($/MWh)                             float64 <br>
-Raw Cost (Millions of $)                 float64 <br>
+Year -                                      int64 <br>
+State -                                    object <br>
+fueltypeid  -                               object <br>
+fuelTypeDescription -                      object <br>
+Ash Content (%) -                         float64 <br>
+Generation (Thousands of MWh) -           float64 <br>
+Sulfur Content (%) -                      float64 <br>
+Total Consumption (millions of MMBtu) -   float64 <br>
+Cost ($/MWh) -                            float64 <br>
+Raw Cost (Millions of $) -                float64 <br>
+
 5.) feature descriptions: <br>
 Year - The calendar year during which the data was recorded. Serves as the temporal reference for all other features. <br>
 State - The U.S. state where the energy data was collected. Useful for regional comparisons and geographic analysis. <br>
