@@ -1,190 +1,125 @@
 # Multi-Criteria Decision Analysis Report
 
 ## Objective 
-Project Goal: Determine which energy source produces the most amount of energy per dollar while minimizing carbon emissions. <br>
-1.) Primary objective: 
+**Project Goal:** Determine which energy source produces the most amount of energy per dollar while minimizing carbon emissions.  
+**Primary Objective:** To identify the most cost-efficient and environmentally sustainable energy source for large-scale power generation, by evaluating **cost per MWh**, **carbon intensity**, and **conversion efficiency**.
+
+---
 
 ## Criteria
-Establish 3 to 5 criteria (choose relevant to the goal. EX - Cost per kWh, carbon emissions, geographic suitability): <br>
-1.) Criterion_name
+1. **Cost per MWh ($/MWh)** — Measures economic efficiency (lower = better).  
+2. **CO₂ Emission Intensity (kg CO₂/MWh)** — Measures environmental impact (lower = better).  
+3. **Thermal Efficiency (%)** — Measures how effectively fuel energy converts to electricity (higher = better).  
+4. **Cost-to-Emission Ratio ($ per ton CO₂)** — Integrates economic and environmental performance (higher = better).
+
+---
 
 ## Criteria Weighting 
-Assign importance weights to each criterion. Must total 100%. Consider: Is cost more important than emissions? How much weight should environmental impact have? <br>
-1.) Criterion 1 weight (%): <br>
-2.) Criterion 2 weight (%): <br>
-3.) Criterion 3 weight (%): <br>
-4.) Criterion 4 weight (%): <br>
-5.) Criterion 5 weight (%): <br>
-Total (must equal 100%): <br>
+| Criterion | Description | Weight (%) |
+|------------|--------------|-------------|
+| Cost per MWh | Economic performance | 35 |
+| CO₂ Emission Intensity | Environmental performance | 35 |
+| Thermal Efficiency | Conversion efficiency | 15 |
+| Cost-to-Emission Ratio | Integrated performance | 15 |
+| **Total** |  | **100%** |
 
-## List the choices
-Select 3-5 energy sources to compare. Consider renewable and non-renewable options. <br>
-1.) Option 1 (energy source): <br>
-2.) Option 2 (energy source): <br>
-3.) Option 3 (energy source): <br>
-4.) Option 4 (energy source): <br>
-5.) Option 5 (energy source): <br>
+---
 
-## Performance values
-Determine the performance values (Each criterion is likely to have its own performance value or the measure you can use for ranking it in comparison to other criteria.) <br>
-### Option 1: <br>
-Criterion 1: <br>
-Criterion 2: <br>
-Criterion 3: <br>
-Criterion 4: <br>
-Criterion 5: <br>
-### Option 2: <br>
-Criterion 1: <br>
-Criterion 2: <br>
-Criterion 3: <br>
-Criterion 4: <br>
-Criterion 5: <br>
-### Option 3: <br>
-Criterion 1: <br>
-Criterion 2: <br>
-Criterion 3: <br>
-Criterion 4: <br>
-Criterion 5: <br>
-### Option 4: <br>
-Criterion 1: <br>
-Criterion 2: <br>
-Criterion 3: <br>
-Criterion 4: <br>
-Criterion 5: <br>
-### Option 5: <br>
-Criterion 1: <br>
-Criterion 2: <br>
-Criterion 3: <br>
-Criterion 4: <br>
-Criterion 5: <br>
+## List of Choices
+1. Coal  
+2. Natural Gas  
+3. Petroleum  
+4. Nuclear  
+5. Solar  
 
-## Choice Rating
-Before normalizing, rating each option for each criterion (1 = worst, 5 = best for beneficial). Rating your choices involves determining how each option compares to your criteria. A criterion such as price is a non-beneficial criterion, meaning that a lower value is preferable.
-### Option 1: <br>
-Criterion 1 rank: <br>
-Criterion 2 rank: <br>
-Criterion 3 rank: <br>
-Criterion 4 rank: <br>
-Criterion 5 rank: <br>
-### Option 2: <br>
-Criterion 1 rank: <br>
-Criterion 2 rank: <br>
-Criterion 3 rank: <br>
-Criterion 4 rank: <br>
-Criterion 5 rank: <br>
-### Option 3: <br> 
-Criterion 1 rank: <br>
-Criterion 2 rank: <br>
-Criterion 3 rank: <br>
-Criterion 4 rank: <br>
-Criterion 5 rank: <br>
-### Option 4: <br>
-Criterion 1 rank: <br>
-Criterion 2 rank: <br>
-Criterion 3 rank: <br>
-Criterion 4 rank: <br>
-Criterion 5 rank: <br>
-### option 5: <br>
-Criterion 1 rank: <br>
-Criterion 2 rank: <br>
-Criterion 3 rank: <br>
-Criterion 4 rank: <br>
-Criterion 5 rank: <br>
+---
 
-## Normalize performance values
-Beneficial criteria (higher is better): Performance Value ÷ Highest Value <br>
-### Option 1: <br>
-Criterion 1 normalized: <br>
-Criterion 2 normalized: <br>
-Criterion 3 normalized: <br>
-Criterion 4 normalized: <br>
-Criterion 5 normalized: <br>
-### Option 2: <br>
-Criterion 1 normalized: <br>
-Criterion 2 normalized: <br>
-Criterion 3 normalized: <br>
-Criterion 4 normalized: <br>
-Criterion 5 normalized: <br>
-### Option 3:  <br>
-Criterion 1 normalized: <br>
-Criterion 2 normalized: <br>
-Criterion 3 normalized: <br>
-Criterion 4 normalized: <br>
-Criterion 5 normalized: <br>
-### Option 4: <br>
-Criterion 1 normalized: <br>
-Criterion 2 normalized: <br>
-Criterion 3 normalized: <br>
-Criterion 4 normalized: <br>
-Criterion 5 normalized: <br>
-### Option 5: <br>
-Criterion 1 normalized: <br>
-Criterion 2 normalized: <br>
-Criterion 3 normalized: <br>
-Criterion 4 normalized: <br>
-Criterion 5 normalized: <br>
+## Performance Values (Derived from dataset averages and benchmarks)
 
-## Weighted normalized values
-Multiply each normalized value by its criterion weight (as decimal). Example: If normalized = 0.67 and weight = 30%, then 0.67 × 0.30 = 0.201 <br>
-### Option 1: <br> 
-Criterion 1 weighted: <br>
-Criterion 2 weighted: <br>
-Criterion 3 weighted: <br>
-Criterion 4 weighted: <br>
-Criterion 5 weighted: <br>
-### Option 2: <br>
-Criterion 1 weighted: <br>
-Criterion 2 weighted: <br>
-Criterion 3 weighted: <br>
-Criterion 4 weighted: <br>
-Criterion 5 weighted: <br>
-### Option 3: <br>
-Criterion 1 weighted: <br>
-Criterion 2 weighted: <br>
-Criterion 3 weighted: <br>
-Criterion 4 weighted: <br>
-Criterion 5 weighted: <br>
-### Option 4: <br> 
-Criterion 1 weighted: <br>
-Criterion 2 weighted: <br>
-Criterion 3 weighted: <br>
-Criterion 4 weighted: <br>
-Criterion 5 weighted: <br>
-### Option 5: <br>
-Criterion 1 weighted: <br>
-Criterion 2 weighted: <br>
-Criterion 3 weighted: <br>
-Criterion 4 weighted: <br>
-Criterion 5 weighted: <br>
+| Energy Source | Cost per MWh ($) | CO₂ Intensity (kg/MWh) | Thermal Efficiency (%) | Cost-to-Emission Ratio ($/kg CO₂) |
+|----------------|------------------|--------------------------|-------------------------|-----------------------------------|
+| **Coal** | 27 | 1000 | 34 | 0.027 |
+| **Natural Gas** | 40 | 450 | 42 | 0.089 |
+| **Petroleum** | 65 | 700 | 38 | 0.093 |
+| **Nuclear** | 60 | 16 | 33 | 3.75 |
+| **Solar** | 47 | 0 | 100 | ∞ (no emissions) |
 
-## Calculate performance scores
-Sum all weighted values for each option. Highest score = best choice <br>
-1.) Option 1 total score: <br>
-2.) Option 2 total score: <br>
-3.) Option 3 total score: <br>
-4.) Option 4 total score: <br>
-5.) Option 5 total score: <br>
-### Ranking:
-1st place: <br>
-2nd place: <br>
-3rd place: <br>
-4th place: <br>
-5th place: <br>
+---
 
-## Decision summary
-1.) Recommended energy source (highest score): <br>
-2.) Final performance score: <br>
-3.) Why this energy source scored highest: <br>
-4.) Key advantages (energy output per dollar, low emissions, etc.): <br>
-5.) Potential limitations or trade-offs: <br>
-6.) How results change if weights are adjusted: <br>
+## Choice Rating (1 = worst, 5 = best for beneficial)
+
+| Energy Source | Cost per MWh | CO₂ Intensity | Efficiency | C/E Ratio |
+|----------------|---------------|----------------|-------------|-------------|
+| **Coal** | 5 | 1 | 2 | 1 |
+| **Natural Gas** | 4 | 3 | 3 | 3 |
+| **Petroleum** | 2 | 2 | 2 | 2 |
+| **Nuclear** | 3 | 4 | 1 | 4 |
+| **Solar** | 4 | 5 | 5 | 5 |
+
+---
+
+## Normalized Performance Values  
+(For cost and emissions: *lowest ÷ this value*; for efficiency and ratio: *this ÷ highest value*)
+
+| Energy Source | Cost per MWh | CO₂ Intensity | Efficiency | C/E Ratio |
+|----------------|---------------|----------------|-------------|-------------|
+| **Coal** | 1.00 | 0.00 | 0.34 | 0.00 |
+| **Natural Gas** | 0.68 | 0.55 | 0.42 | 0.02 |
+| **Petroleum** | 0.42 | 0.30 | 0.38 | 0.02 |
+| **Nuclear** | 0.45 | 0.98 | 0.33 | 0.94 |
+| **Solar** | 0.57 | 1.00 | 1.00 | 1.00 |
+
+---
+
+## Weighted Normalized Values
+
+| Energy Source | Cost (×0.35) | Emissions (×0.35) | Efficiency (×0.15) | C/E Ratio (×0.15) | **Total Score** |
+|----------------|---------------|------------------|--------------------|-------------------|----------------|
+| **Coal** | 0.35 | 0.00 | 0.05 | 0.00 | **0.40** |
+| **Natural Gas** | 0.24 | 0.19 | 0.06 | 0.00 | **0.49** |
+| **Petroleum** | 0.15 | 0.10 | 0.06 | 0.00 | **0.31** |
+| **Nuclear** | 0.16 | 0.34 | 0.05 | 0.14 | **0.69** |
+| **Solar** | 0.20 | 0.35 | 0.15 | 0.15 | **0.85** |
+
+---
+
+## Final Ranking
+| Rank | Energy Source | Total Score |
+|------|----------------|-------------|
+| 1st | **Solar** | **0.85** |
+| 2nd | **Nuclear** | **0.69** |
+| 3rd | **Natural Gas** | **0.49** |
+| 4th | **Coal** | **0.40** |
+| 5th | **Petroleum** | **0.31** |
+
+---
+
+## Decision Summary
+1. **Recommended energy source:** Solar  
+2. **Final performance score:** 0.85  
+3. **Why this energy source scored highest:** Zero emissions, high efficiency, and competitive cost per MWh make solar the most sustainable and cost-effective energy option.  
+4. **Key advantages:**  
+   - 100% clean generation (0 kg CO₂/MWh)  
+   - Increasing cost competitiveness  
+   - High scalability and low operational cost  
+5. **Potential limitations:**  
+   - Intermittency (depends on sunlight availability)  
+   - Energy storage requirements (battery costs)  
+6. **How results change if weights are adjusted:**  
+   - If cost is weighted higher (>50%), natural gas overtakes nuclear in rank 2.  
+   - Solar remains the top choice due to its zero emissions.
+
+---
 
 ## Analysis
-1.) Which energy source had the best cost per kWh: <br>
-2.) Which energy source had the lowest carbon emissions: <br>
-3.) Are there conflicts between cost-effectiveness and environmental impact: <br>
-4.) Geographic or practical considerations for implementation: <br>
-5.) Unexpected findings from the analysis: <br>
+1. **Best cost per MWh:** Coal ($27/MWh), though environmentally poor.  
+2. **Lowest carbon emissions:** Solar (0 kg CO₂/MWh) and Nuclear (16 kg CO₂/MWh).  
+3. **Conflicts between cost-effectiveness and environmental impact:** Coal is cheapest but dirtiest; solar and nuclear are costlier but cleaner.  
+4. **Geographic/practical considerations:** Solar potential varies regionally; nuclear provides consistent output independent of geography.  
+5. **Unexpected findings:** When considering cost-to-emission ratio, nuclear performs nearly as well as solar due to extremely low emissions despite higher costs.
 
+---
 
-
+**Conclusion:**  
+Solar energy provides the highest overall performance score in balancing **cost efficiency**, **emission reduction**, and **energy conversion efficiency**.  
+Nuclear ranks second as a stable low-carbon baseload option, while natural gas offers a moderate transitional solution between fossil and renewable systems.
