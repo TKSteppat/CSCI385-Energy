@@ -45,7 +45,6 @@ Total Consumption (millions of MMBtu)      53.23042 <br>
 Cost ($/MWh)                               33.00000 <br>
 Raw Cost (Millions of $)                  131.60000 <br>
 2.) Measures of dispersion (standard deviation): <br>
- Year                                         2.317104 <br>
 Ash Content (%)                              4.144487 <br>
 Generation (Thousands of MWh)            25199.190056 <br>
 Sulfur Content (%)                           1.107974 <br>
@@ -60,7 +59,7 @@ Sulfur Content (%) -> Min: 0.0, Max: 6.01 <br>
 Total Consumption (millions of MMBtu) -> Min: 0.00028, Max: 2324.03563 <br>
 Cost ($/MWh) -> Min: 13.25, Max: 122.5 <br>
 Raw Cost (Millions of $) -> Min: 0.0, Max: 14914.8 <br>
-4.) count of missing values: 0 <br>
+4.) count of missing values: 2307 br>
 5.) outliers (This is useful for determining if a distribution is skewed): <br>
 Ash Content (%)                          178 <br>
 Cost ($/MWh)                              11 <br>
@@ -77,16 +76,37 @@ fueltypeid                                 0 <br>
 1.) Distribution shape (normal, skewed, bimodal, etc):  <br>
 2.) Features with heavy tails or long skews:  <br>
 3.) Categorial features with imbalanced class distributions:  <br>
-4.) Features with missing values or zero values  <br>
-
+4.) Features with missing values or zero values None <br>
+Missing values per feature:
+Year                                       0
+State                                      0
+fueltypeid                                 0
+fuelTypeDescription                        0
+Ash Content (%)                          399
+Generation (Thousands of MWh)              0
+Sulfur Content (%)                       388
+Total Consumption (millions of MMBtu)    221
+Cost ($/MWh)                             881
+Raw Cost (Millions of $)                 418
+Total 0 values per feature:
+Year                                       0
+State                                      0
+fueltypeid                                 0
+fuelTypeDescription                        0
+Ash Content (%)                          587
+Generation (Thousands of MWh)              0
+Sulfur Content (%)                       558
+Total Consumption (millions of MMBtu)      0
+Cost ($/MWh)                               0
+Raw Cost (Millions of $)                  27
 ## Feature assessment
 1.) Strong correlations between features:  <br>
 2.) highly colinear features:  <br>
 3.) Features with high cardinality that may need encoding:  <br>
-4.) Inconsistent units:  <br>
+4.) Inconsistent units:  None <br>
 5.) derived variables:  <br>
 
 ## Data quality evaluation
 1.) How much variation exists within each energy source (e.g., solar costs vary by location:  <br>
-2.) Are the units consistent:  <br>
-3.) Are there duplicate entries:  <br>
+2.) Are the units consistent: Yes <br>
+3.) Are there duplicate entries:  No <br>
