@@ -77,28 +77,28 @@ fueltypeid                                 0 <br>
 2.) Features with heavy tails or long skews:  <br>
 3.) Categorial features with imbalanced class distributions:  <br>
 4.) Features with missing values or zero values None <br>
-Missing values per feature:
-Year                                       0
-State                                      0
-fueltypeid                                 0
-fuelTypeDescription                        0
-Ash Content (%)                          399
-Generation (Thousands of MWh)              0
-Sulfur Content (%)                       388
-Total Consumption (millions of MMBtu)    221
-Cost ($/MWh)                             881
-Raw Cost (Millions of $)                 418
-Total 0 values per feature:
-Year                                       0
-State                                      0
-fueltypeid                                 0
-fuelTypeDescription                        0
-Ash Content (%)                          587
-Generation (Thousands of MWh)              0
-Sulfur Content (%)                       558
-Total Consumption (millions of MMBtu)      0
-Cost ($/MWh)                               0
-Raw Cost (Millions of $)                  27
+Missing values per feature: <br>
+Year                                       0 <br>
+State                                      0 <br>
+fueltypeid                                 0 <br>
+fuelTypeDescription                        0 <br>
+Ash Content (%)                          399 <br>
+Generation (Thousands of MWh)              0 <br>
+Sulfur Content (%)                       388 <br>
+Total Consumption (millions of MMBtu)    221 <br>
+Cost ($/MWh)                             881 <br>
+Raw Cost (Millions of $)                 418 <br>
+Total 0 values per feature: <br>
+Year                                       0 <br>
+State                                      0 <br>
+fueltypeid                                 0 <br>
+fuelTypeDescription                        0 <br>
+Ash Content (%)                          587 <br>
+Generation (Thousands of MWh)              0 <br>
+Sulfur Content (%)                       558 <br>
+Total Consumption (millions of MMBtu)      0 <br>
+Cost ($/MWh)                               0 <br>
+Raw Cost (Millions of $)                  27 <br>
 ## Feature assessment
 1.) Strong correlations between features:  <br>
 2.) highly colinear features:  <br>
