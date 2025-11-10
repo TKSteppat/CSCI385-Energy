@@ -101,12 +101,13 @@ Cost ($/MWh)                               0 <br>
 Raw Cost (Millions of $)                  27 <br>
 ## Feature assessment
 1.) Strong correlations between features:  <br>
-2.) highly colinear features:  <br>
-3.) Features with high cardinality that may need encoding:  <br>
+2.) highly colinear features: Generation, Consumption, and Raw Cost show multicollinearity. <br>
+3.) Features with high cardinality that may need encoding: State (≈50), fueltypeid, fuelTypeDescription. <br>
 4.) Inconsistent units:  None <br>
-5.) derived variables:  <br>
+5.) derived variables: Raw Cost (derived from Cost × Generation). Potential for Efficiency and Emission ratios.<br>
 
 ## Data quality evaluation
-1.) How much variation exists within each energy source (e.g., solar costs vary by location:  <br>
+1.) How much variation exists within each energy source (e.g., solar costs vary by location: 
+• Significant variation exists across and within fuel types. Generation levels range from a few thousand to over 250,000 MWh, while production costs span $13–$122 per MWh—indicating large efficiency and infrastructure disparities among states. Coal and oil show the highest variability in cost and fuel quality (ash and sulfur content), whereas renewables exhibit lower cost dispersion but smaller generation scales. Overall, energy type, location, and technology collectively explain the observed heterogeneity in cost and performance <br>
 2.) Are the units consistent: Yes <br>
 3.) Are there duplicate entries:  No <br>
