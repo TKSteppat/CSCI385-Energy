@@ -3,6 +3,44 @@
 
 ### Scenario 1 - Regional optimization
 Description: Which energy sources are optimal for the top 5 most populated states <br>
+1.) california <br>
+OPTIMAL ENERGY SOURCE: onshore wind turbine <br>
+   Overall Score: 1.0000 <br>
+   Cost: $43.50/MWh <br>
+   CO₂ Intensity: 0.0 kg/MWh <br>
+   Efficiency: 50.07% <br>
+   Cost-to-Emission Ratio: ∞ (zero emissions) <br>
+   Total Generation: 68,577.1 thousand MWh <br>
+
+2.) Texas <br>
+OPTIMAL ENERGY SOURCE: onshore wind turbine <br>
+   Overall Score: 1.0000 <br>
+   Cost: $16.42/MWh <br>
+   CO₂ Intensity: 0.0 kg/MWh <br>
+   Efficiency: 37.48% <br>
+   Cost-to-Emission Ratio: ∞ (zero emissions) <br>
+   Total Generation: 75,700.4 thousand MWh <br>
+
+3.) Florida <br>
+    Not enough data <br>
+    
+4.) New York <br>
+OPTIMAL ENERGY SOURCE: onshore wind turbine <br>
+   Overall Score: 1.0000 <br>
+   Cost: $61.56/MWh <br>
+   CO₂ Intensity: 0.0 kg/MWh <br>
+   Efficiency: 62.90% <br>
+   Cost-to-Emission Ratio: ∞ (zero emissions) <br>
+   Total Generation: 22,181.3 thousand MWh <br>
+
+5.)  Pennsylvania <br>
+OPTIMAL ENERGY SOURCE: onshore wind turbine <br>
+   Overall Score: 1.0000 <br>
+   Cost: $35.50/MWh <br>
+   CO₂ Intensity: 0.0 kg/MWh <br>
+   Efficiency: 53.35% <br>
+   Cost-to-Emission Ratio: ∞ (zero emissions) <br>
+   Total Generation: 14,164.0 thousand MWh <br>
 
 ### Scenario 2 - Budget-Constrained scenarios 
 Description: Which energy sources are optimal under a strict financial limit starting from 50$/MWh, 100$/MWh, 150$/MWh, etc <br>
