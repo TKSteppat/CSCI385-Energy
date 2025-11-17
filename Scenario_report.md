@@ -48,5 +48,11 @@ Description: Which energy sources are optimal under a strict financial limit sta
 ### Scenario 3 - Business or industrial case
 Description: Find the optimal energy source selection for the specific consumption needs <br>
 
+Solar ranks highest overall because it combines zero emissions with strong efficiency and competitive cost. Nuclear ranks second, very low CO₂ and reliable baseload, scoring strongly on the cost-to-emission ratio despite a higher $/MWh. When cost alone is considered, coal offers the lowest listed price per MWh, though it results in the highest emissions. <br>
+
+Best Overall: **Solar** for most business cases. <br>
+Best for reliability emphasis: **Nuclear**, leading low-carbon option for stable baseload power. <br>
+Lowest cost fallback: **Coal** (lowest $/MWh) with with major environmental compromises. <br>
+
 ### Scenario 4 - Energy sector-specific 
 Description: Find the optimal energy source for specific energy sectors like transportation, residential, or agriculture <br>
