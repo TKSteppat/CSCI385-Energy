@@ -54,5 +54,14 @@ Best Overall: **Solar** for most business cases. <br>
 Best for reliability emphasis: **Nuclear**, leading low-carbon option for stable baseload power. <br>
 Lowest cost fallback: **Coal** (lowest $/MWh) with with major environmental compromises. <br>
 
-### Scenario 4 - Energy sector-specific 
+### Scenario 4 - Energy sector-specific <br>
 Description: Find the optimal energy source for specific energy sectors like transportation, residential, or agriculture <br>
+
+**Transportation**: **Natural Gas** <br>
+Transportation needs steady, high volume, always available energy. From the data, Natural Gas is the only fuel with high generation + high consumption, meaning it can actually meet that reliability requirement. Natural Gas also has zero ash/sulfur and lower CO₂ than coal and petroleum. It’s also cheaper than nuclear, wind, and solar. <br>
+
+**Residential**: **Solar** <br>
+Residential areas care most about clean air, low pollution, and long-term sustainability. Solar has zero CO₂, zero ash, zero sulfur, and ranks 1 in the MCDA. It aligns perfectly with clean living environments, even if the cost is higher. <br>
+
+**Agriculture**: **Natural Gas** <br>
+Agriculture needs affordable, consistent energy for pumps, irrigation, processing, and seasonal peaks. Natural Gas is cleaner than coal/petroleum, cheaper than nuclear/solar, and has strong availability. It hits the cost cleanliness balance farmers need. <br>
