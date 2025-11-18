@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 
 # Load data
-df_new = pd.read_csv("datasets/cleaned/cleaned_combined_data.csv", encoding="utf-8", delimiter=",")
+df_new = pd.read_csv("datasets/cleaned/cleaned_combined_data_with_derived.csv", encoding="utf-8", delimiter=",")
 
 # Calculate Heat Rate (Btu/kWh)
 df_new["Heat_Rate (Btu/kWh)"] = (
@@ -43,4 +43,4 @@ df_new["CtoE_Ratio"] = df_new["Cost ($/MWh)"] / df_new["CO2_Intensity_kg_per_MWh
 # example: solar's cost/emission ratio is 10x higher than coal's ___ meaning it's much cleaner per dollar spent"
 # Save once
 df_new["CtoE_Ratio"] = df_new["CtoE_Ratio"].fillna(0)
-df_new.to_csv("datasets/cleaned/cleaned_combined_data.csv", index = False)
+df_new.to_csv("datasets/cleaned/cleaned_combined_data_with_derived.csv", index = False)

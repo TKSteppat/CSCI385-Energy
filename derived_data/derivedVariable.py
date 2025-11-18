@@ -2,10 +2,10 @@ import pandas as pd
 import numpy as np
 
 # Load your cleaned dataset
-df = pd.read_csv("cleaned_combined_data.csv")
+df = pd.read_csv("derived_data/cleaned_combined_data.csv")
 
 # Filter only for the three energy sources we care about
-energy_sources = ["natural gas", "petroleum", "all coal products"]
+energy_sources = ["natural gas", "petroleum", "all coal products", "nuclear"]
 energy_sources_df = df[df["fuelTypeDescription"].isin(energy_sources)].copy()
 
 # Convert to base units
@@ -26,7 +26,7 @@ energy_sources_df = energy_sources_df[[
 ]].sort_values(["Year", "State", "fuelTypeDescription"])
 
 # Save results
-energy_sources_df.to_csv("price_per_mwh.csv", index=False)
+energy_sources_df.to_csv("derived_data/price_per_mwh.csv", index=False)
 
 # Display first few results
 energy_sources_df.head(10)
