@@ -5,49 +5,51 @@
 Description: Which energy sources are optimal for the top 5 most populated states <br>
 Methodology: The results were calculated based on the MCDA report <br>
 1.) California <br>
- OPTIMAL ENERGY SOURCE: onshore wind turbine <br>
-   Overall Score: 0.6500 <br>
-   Cost: $43.50/MWh <br>
-   CO₂ Intensity: 0.0 kg/MWh <br>
-   Efficiency: 50.07% <br>
-   Cost-to-Emission Ratio: 0 (zero emissions) <br>
-   Total Generation: 68,577.1 thousand MWh <br>
+ OPTIMAL ENERGY SOURCE: natural gas
+   Overall Score: 0.6500
+   Cost: $31.89/MWh
+   CO₂ Intensity: 1227.7 kg/MWh
+   Efficiency: 39.55%
+   Cost-to-Emission Ratio: 0.0260
+   Total Generation: 371,860.7 thousand MWh
+   Based on 4 data records
 
 2.) Texas <br>
- OPTIMAL ENERGY SOURCE: nuclear <br>
-   Overall Score: 0.9806 <br>
-   Cost: $6.79/MWh <br>
-   CO₂ Intensity: 0.0 kg/MWh <br>
-   Efficiency: 32.64% <br>
-   Cost-to-Emission Ratio: 0 (zero emissions) <br>
-   Total Generation: 165,383.8 thousand MWh <br>
+ OPTIMAL ENERGY SOURCE: all coal products
+   Overall Score: 0.9062
+   Cost: $21.59/MWh
+   CO₂ Intensity: 1040.3 kg/MWh
+   Efficiency: 31.64%
+   Cost-to-Emission Ratio: 0.0208
+   Total Generation: 499,351.4 thousand MWh
 
 3.) Florida <br>
- OPTIMAL ENERGY SOURCE: nuclear <br>
-   Overall Score: 0.9608 <br>
-   Cost: $6.17/MWh <br>
-   CO₂ Intensity: 0.0 kg/MWh <br>
-   Efficiency: 32.65% <br>
-   Cost-to-Emission Ratio: 0 (zero emissions) <br>
-   Total Generation: 177,481.2 thousand MWh <br>
-    
+ OPTIMAL ENERGY SOURCE: natural gas
+   Overall Score: 1.0000
+   Cost: $27.95/MWh
+   CO₂ Intensity: 462.4 kg/MWh
+   Efficiency: 44.21%
+   Cost-to-Emission Ratio: 0.0605
+   Total Generation: 509,020.5 thousand MWh
+
+
 4.) New York <br>
- OPTIMAL ENERGY SOURCE: nuclear <br>
-   Overall Score: 0.9279 <br>
-   Cost: $6.94/MWh <br>
-   CO₂ Intensity: 0.0 kg/MWh <br>
-   Efficiency: 32.66% <br>
-   Cost-to-Emission Ratio: 0 (zero emissions) <br>
-   Total Generation: 214,868.7 thousand MWh <br>
+ OPTIMAL ENERGY SOURCE: natural gas
+   Overall Score: 0.9375
+   Cost: $23.23/MWh
+   CO₂ Intensity: 1362.7 kg/MWh
+   Efficiency: 38.61%
+   Cost-to-Emission Ratio: 0.0170
+   Total Generation: 204,642.8 thousand MWh
 
 5.)  Pennsylvania <br>
- OPTIMAL ENERGY SOURCE: nuclear <br>
-   Overall Score: 0.9419 <br>
-   Cost: $6.64/MWh <br>
-   CO₂ Intensity: 0.0 kg/MWh <br>
-   Efficiency: 32.68% <br>
-   Cost-to-Emission Ratio: 0 (zero emissions) <br>
-   Total Generation: 228,589.9 thousand MWh <br>
+ OPTIMAL ENERGY SOURCE: natural gas
+   Overall Score: 1.0000
+   Cost: $17.53/MWh
+   CO₂ Intensity: 893.6 kg/MWh
+   Efficiency: 45.26%
+   Cost-to-Emission Ratio: 0.0196
+   Total Generation: 603,630.7 thousand MWh
 
 ### Scenario 2 - Budget-Constrained scenarios 
 Description: Which energy sources are optimal under a strict financial limit starting from 50$/MWh, 100$/MWh, 150$/MWh, etc <br>
