@@ -3,44 +3,51 @@
 
 ### Scenario 1 - Regional optimization
 Description: Which energy sources are optimal for the top 5 most populated states <br>
-1.) california <br>
-OPTIMAL ENERGY SOURCE: onshore wind turbine <br>
-   Overall Score: 1.0000 <br>
+Methodology: The results were calculated based on the MCDA report <br>
+1.) California <br>
+ OPTIMAL ENERGY SOURCE: onshore wind turbine <br>
+   Overall Score: 0.6500 <br>
    Cost: $43.50/MWh <br>
    CO₂ Intensity: 0.0 kg/MWh <br>
    Efficiency: 50.07% <br>
-   Cost-to-Emission Ratio: ∞ (zero emissions) <br>
+   Cost-to-Emission Ratio: 0 (zero emissions) <br>
    Total Generation: 68,577.1 thousand MWh <br>
 
 2.) Texas <br>
-OPTIMAL ENERGY SOURCE: onshore wind turbine <br>
-   Overall Score: 1.0000 <br>
-   Cost: $16.42/MWh <br>
+ OPTIMAL ENERGY SOURCE: nuclear <br>
+   Overall Score: 0.9806 <br>
+   Cost: $6.79/MWh <br>
    CO₂ Intensity: 0.0 kg/MWh <br>
-   Efficiency: 37.48% <br>
-   Cost-to-Emission Ratio: ∞ (zero emissions) <br>
-   Total Generation: 75,700.4 thousand MWh <br>
+   Efficiency: 32.64% <br>
+   Cost-to-Emission Ratio: 0 (zero emissions) <br>
+   Total Generation: 165,383.8 thousand MWh <br>
 
 3.) Florida <br>
-    Not enough data <br>
+ OPTIMAL ENERGY SOURCE: nuclear <br>
+   Overall Score: 0.9608 <br>
+   Cost: $6.17/MWh <br>
+   CO₂ Intensity: 0.0 kg/MWh <br>
+   Efficiency: 32.65% <br>
+   Cost-to-Emission Ratio: 0 (zero emissions) <br>
+   Total Generation: 177,481.2 thousand MWh <br>
     
 4.) New York <br>
-OPTIMAL ENERGY SOURCE: onshore wind turbine <br>
-   Overall Score: 1.0000 <br>
-   Cost: $61.56/MWh <br>
+ OPTIMAL ENERGY SOURCE: nuclear <br>
+   Overall Score: 0.9279 <br>
+   Cost: $6.94/MWh <br>
    CO₂ Intensity: 0.0 kg/MWh <br>
-   Efficiency: 62.90% <br>
-   Cost-to-Emission Ratio: ∞ (zero emissions) <br>
-   Total Generation: 22,181.3 thousand MWh <br>
+   Efficiency: 32.66% <br>
+   Cost-to-Emission Ratio: 0 (zero emissions) <br>
+   Total Generation: 214,868.7 thousand MWh <br>
 
 5.)  Pennsylvania <br>
-OPTIMAL ENERGY SOURCE: onshore wind turbine <br>
-   Overall Score: 1.0000 <br>
-   Cost: $35.50/MWh <br>
+ OPTIMAL ENERGY SOURCE: nuclear <br>
+   Overall Score: 0.9419 <br>
+   Cost: $6.64/MWh <br>
    CO₂ Intensity: 0.0 kg/MWh <br>
-   Efficiency: 53.35% <br>
-   Cost-to-Emission Ratio: ∞ (zero emissions) <br>
-   Total Generation: 14,164.0 thousand MWh <br>
+   Efficiency: 32.68% <br>
+   Cost-to-Emission Ratio: 0 (zero emissions) <br>
+   Total Generation: 228,589.9 thousand MWh <br>
 
 ### Scenario 2 - Budget-Constrained scenarios 
 Description: Which energy sources are optimal under a strict financial limit starting from 50$/MWh, 100$/MWh, 150$/MWh, etc <br>
