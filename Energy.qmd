@@ -166,69 +166,64 @@ missing_cost["fuelTypeDescription"].value_counts()
   - Are models deployed on live data?
   - Are they behaving as expected?
 
-
+MCDA and MCDA stats as graphs
 ```{r}
+# Store criteria weights
 critWeight <- tibble(
-  criterion = c("`Cost ($/MWh)`", "CO2_Intensity_kg_per_MWh", "`efficiency%`", "CtoE_Ratio"),
+  criterion = c("Cost ($/MWh)", "CO2_Intensity_kg_per_MWh", "efficiency%", "CtoE_Ratio"),
   direction = c("cost","cost","benefit","benefit"),
   weight = as.integer(c(35,35,15,15))
 )
 
+# Build tibble for pie chart display
 myPie <- critWeight %>%
-  mutate(label = paste0(criterion, "\n", weight, "%"))
+  mutate(label = c("Cost", "CO2 Intensity", "Thermal Efficiency", "CtoE Ratio"))
 
+# Pie chart for criteria weights
 ggplot(myPie, aes(x="", y=weight, fill=criterion))+geom_col(width=1)+coord_polar(theta="y")+geom_text(aes(label = label), position = position_stack(vjust = 0.5), size = 10)+theme_void()+theme(legend.position = "none")
 ```
 
 ```{r}
-energy <- py$energy_df
-glimpse(energy)
-perfVal <-energy %>%
-  select(fueltypeid, `Cost ($/MWh)`, `efficiency%`, CO2_Intensity_kg_per_MWh, CtoE_Ratio) %>%
-  pivot_longer(-fueltypeid, names_to = "metric", values_to = "value") %>%
-  mutate(
-    value = ifelse(metric == "CtoE_Ratio", value*100, value),
-    value = ifelse(is.infinite(value),NA,value)
-  ) %>%
-  group_by(metric) %>%
-  mutate(scaled = (value - min(value, na.rm = TRUE))/(max(value, na.rm = TRUE) - min(value, na.rm = TRUE))) %>%
-  ungroup() %>%
-  group_by(fueltypeid, metric) %>%
-  summarise(mean_scaled = mean(scaled, na.rm = TRUE), .groups = "drop")
-glimpse(perfVal)
-ggplot(perfVal, aes(x=fueltypeid, y=mean_scaled, fill = metric))+geom_col(position = position_dodge(width = 0.8), width = 0.7)
-perfVal %>% filter(metric == "CtoE_Ratio")
-nucWat <- energy %>%
-  filter(fueltypeid == "NUC", is.finite(CtoE_Ratio))
-nucWat$CtoE_Ratio
-```
-
-```{r}
+# select only intended criteria, pivot on criteria, set values to be their averages, then merge weights
 enerlong <- energy %>%
   select(fueltypeid, `Cost ($/MWh)`, `efficiency%`, CO2_Intensity_kg_per_MWh, CtoE_Ratio) %>%
   pivot_longer(-fueltypeid, names_to = "criterion", values_to = "value") %>%
+  group_by(criterion, fueltypeid) %>%
+  group_modify(~{tibble(value = mean(.x$value, na.rm = TRUE))}) %>%
+  ungroup %>%
   left_join(critWeight, by = "criterion")
-# FIX JOIN TO AGGREGATE VALUES BEFORE JOINING
 
+# handle infinites and find normals
 minmax <- enerlong %>%
   group_by(criterion, direction) %>%
   mutate(
+    value = ifelse(is.infinite(value), 1, value),
+  ) %>%
+  mutate(
     rng = max(value, na.rm = TRUE) - min(value, na.rm = TRUE),
     norm = case_when(
-      is.na(value) ~ NA_real_,
+      is.na(value) ~ case_when(direction == "cost" ~ 0, direction == "benefit" ~ 1),
       rng == 0 ~ 1, 
       direction == "benefit" ~ (value - min(value, na.rm = TRUE)) / rng,
-      direction == "cost"   ~ (value - min(value, na.rm = TRUE)) / rng,
+      direction == "cost"   ~ (max(value, na.rm = TRUE) - value) / rng,
     )
   ) %>%
   ungroup()
 
-wsm <- minmax %>%
-  mutate(weighted = norm * weight) %>%
+# find weighted scores 
+weighted <- minmax %>%
+  mutate(weighted = (norm * weight) / 100) 
+
+# find weighted sums
+wsm <- weighted %>%
   group_by(fueltypeid) %>%
   summarise(WSM_score = sum(weighted), .groups = "drop") %>%
   arrange(desc(WSM_score))
 wsm
 
+# Bar chart showing Normalized Performance Values
+ggplot(minmax, aes(x=fueltypeid, y=norm, fill = criterion))+geom_col(position = position_dodge(width = 0.8), width = 0.7)+labs(title = "Normalized Performance Values", x = "Fuel Type ID")+scale_fill_discrete(name = "Performance Value")
 
+# bar chart showing WSM scores in order
+ggplot(wsm, aes(x=reorder(fueltypeid, -WSM_score), y=WSM_score, fill = fueltypeid))+geom_col()+labs(title = "Final Rankings", x = "Fuel Type ID")+ylim(0, 1)+theme(legend.position = "none")
 ```
