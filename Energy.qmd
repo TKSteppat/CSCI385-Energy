@@ -56,9 +56,7 @@ We already scraped the data from the EIA website, so we can use that data direct
 ```{python}
 # YOUR CODE HERE
 #Find all csv files in the directory, read them in, and store them in a single df
-eia_csvs = glob("datasets/*.csv")
-dfs = [pd.read_csv(csv) for csv in eia_csvs]
-energy_df = pd.concat(dfs, ignore_index=True)
+energy_df = pd.read_csv("./datasets/cleaned/cleaned_combined_data_with_derived.csv")
 energy_df.head()
 ```
 
@@ -167,3 +165,70 @@ missing_cost["fuelTypeDescription"].value_counts()
 - **Deployment**:
   - Are models deployed on live data?
   - Are they behaving as expected?
+
+
+```{r}
+critWeight <- tibble(
+  criterion = c("`Cost ($/MWh)`", "CO2_Intensity_kg_per_MWh", "`efficiency%`", "CtoE_Ratio"),
+  direction = c("cost","cost","benefit","benefit"),
+  weight = as.integer(c(35,35,15,15))
+)
+
+myPie <- critWeight %>%
+  mutate(label = paste0(criterion, "\n", weight, "%"))
+
+ggplot(myPie, aes(x="", y=weight, fill=criterion))+geom_col(width=1)+coord_polar(theta="y")+geom_text(aes(label = label), position = position_stack(vjust = 0.5), size = 10)+theme_void()+theme(legend.position = "none")
+```
+
+```{r}
+energy <- py$energy_df
+glimpse(energy)
+perfVal <-energy %>%
+  select(fueltypeid, `Cost ($/MWh)`, `efficiency%`, CO2_Intensity_kg_per_MWh, CtoE_Ratio) %>%
+  pivot_longer(-fueltypeid, names_to = "metric", values_to = "value") %>%
+  mutate(
+    value = ifelse(metric == "CtoE_Ratio", value*100, value),
+    value = ifelse(is.infinite(value),NA,value)
+  ) %>%
+  group_by(metric) %>%
+  mutate(scaled = (value - min(value, na.rm = TRUE))/(max(value, na.rm = TRUE) - min(value, na.rm = TRUE))) %>%
+  ungroup() %>%
+  group_by(fueltypeid, metric) %>%
+  summarise(mean_scaled = mean(scaled, na.rm = TRUE), .groups = "drop")
+glimpse(perfVal)
+ggplot(perfVal, aes(x=fueltypeid, y=mean_scaled, fill = metric))+geom_col(position = position_dodge(width = 0.8), width = 0.7)
+perfVal %>% filter(metric == "CtoE_Ratio")
+nucWat <- energy %>%
+  filter(fueltypeid == "NUC", is.finite(CtoE_Ratio))
+nucWat$CtoE_Ratio
+```
+
+```{r}
+enerlong <- energy %>%
+  select(fueltypeid, `Cost ($/MWh)`, `efficiency%`, CO2_Intensity_kg_per_MWh, CtoE_Ratio) %>%
+  pivot_longer(-fueltypeid, names_to = "criterion", values_to = "value") %>%
+  left_join(critWeight, by = "criterion")
+# FIX JOIN TO AGGREGATE VALUES BEFORE JOINING
+
+minmax <- enerlong %>%
+  group_by(criterion, direction) %>%
+  mutate(
+    rng = max(value, na.rm = TRUE) - min(value, na.rm = TRUE),
+    norm = case_when(
+      is.na(value) ~ NA_real_,
+      rng == 0 ~ 1, 
+      direction == "benefit" ~ (value - min(value, na.rm = TRUE)) / rng,
+      direction == "cost"   ~ (value - min(value, na.rm = TRUE)) / rng,
+    )
+  ) %>%
+  ungroup()
+
+wsm <- minmax %>%
+  mutate(weighted = norm * weight) %>%
+  group_by(fueltypeid) %>%
+  summarise(WSM_score = sum(weighted), .groups = "drop") %>%
+  arrange(desc(WSM_score))
+wsm
+
+
+```
