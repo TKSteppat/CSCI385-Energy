@@ -56,7 +56,7 @@ We already scraped the data from the EIA website, so we can use that data direct
 ```{python}
 # YOUR CODE HERE
 #Find all csv files in the directory, read them in, and store them in a single df
-energy_df = pd.read_csv("./datasets/cleaned/cleaned_combined_data_with_derived.csv")
+energy_df = pd.read_csv("./datasets/cleaned/cleaned_combined_data_with_derived_fixed.csv")
 energy_df.head()
 ```
 
