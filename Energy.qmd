@@ -185,7 +185,7 @@ ggplot(myPie, aes(x="", y=weight, fill=criterion))+geom_col(width=1)+coord_polar
 
 ```{r}
 # select only intended criteria, pivot on criteria, set values to be their averages, then merge weights
-enerlong <- energy %>%
+enerlong <- py$energy_df %>%
   select(fueltypeid, `Cost ($/MWh)`, `efficiency%`, CO2_Intensity_kg_per_MWh, CtoE_Ratio) %>%
   pivot_longer(-fueltypeid, names_to = "criterion", values_to = "value") %>%
   group_by(criterion, fueltypeid) %>%
