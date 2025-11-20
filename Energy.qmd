@@ -171,7 +171,7 @@ MCDA and MCDA stats as graphs
 # Store criteria weights
 critWeight <- tibble(
   criterion = c("Cost ($/MWh)", "CO2_Intensity_kg_per_MWh", "efficiency%", "CtoE_Ratio"),
-  direction = c("cost","cost","benefit","benefit"),
+  direction = c("cost","cost","benefit","cost"),
   weight = as.integer(c(35,35,15,15))
 )
 
@@ -194,7 +194,7 @@ enerlong <- py$energy_df %>%
   left_join(critWeight, by = "criterion")
 
 # handle infinites and find normals
-minmax <- enerlong %>%
+norm <- enerlong %>%
   group_by(criterion, direction) %>%
   mutate(
     value = ifelse(is.infinite(value), 1, value),
@@ -204,14 +204,18 @@ minmax <- enerlong %>%
     norm = case_when(
       is.na(value) ~ case_when(direction == "cost" ~ 0, direction == "benefit" ~ 1),
       rng == 0 ~ 1, 
-      direction == "benefit" ~ (value - min(value, na.rm = TRUE)) / rng,
-      direction == "cost"   ~ (max(value, na.rm = TRUE) - value) / rng,
+      TRUE ~ (value - min(value, na.rm = TRUE)) / rng,
     )
   ) %>%
   ungroup()
 
 # find weighted scores 
-weighted <- minmax %>%
+weighted <- norm %>%
+  group_by(criterion, direction)%>%
+  mutate(
+    norm = ifelse(direction == "cost", 1 - norm, norm)
+  ) %>%
+  ungroup() %>%
   mutate(weighted = (norm * weight) / 100) 
 
 # find weighted sums
@@ -222,8 +226,9 @@ wsm <- weighted %>%
 wsm
 
 # Bar chart showing Normalized Performance Values
-ggplot(minmax, aes(x=fueltypeid, y=norm, fill = criterion))+geom_col(position = position_dodge(width = 0.8), width = 0.7)+labs(title = "Normalized Performance Values", x = "Fuel Type ID")+scale_fill_discrete(name = "Performance Value")
+ggplot(norm, aes(x=fueltypeid, y=norm, fill = criterion))+geom_col(position = position_dodge(width = 0.8), width = 0.7)+labs(title = "Normalized Performance Values", x = "Fuel Type ID")+scale_fill_discrete(name = "Performance Value")
 
 # bar chart showing WSM scores in order
 ggplot(wsm, aes(x=reorder(fueltypeid, -WSM_score), y=WSM_score, fill = fueltypeid))+geom_col()+labs(title = "Final Rankings", x = "Fuel Type ID")+ylim(0, 1)+theme(legend.position = "none")
+print(norm, n=24)
 ```
