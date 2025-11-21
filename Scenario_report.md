@@ -51,7 +51,12 @@ Methodology: The results were calculated based on the MCDA report <br>
  Total Generation: 14,164.0 thousand MWh <br>
 
 ### Scenario 2 - Budget-Constrained scenarios 
-Description: Which energy sources are optimal under a strict financial limit starting from 50$/MWh, 100$/MWh, 150$/MWh, etc <br>
+Description: Which energy sources are optimal under a strict financial limit starting from 20$/MWh, 40$/MWh, 60$/MWh, etc <br>
+$20/MWh cap → No eligible sources. <br>
+$40/MWh cap → onshore wind turbine (score=1.000, cost=30.01, CO₂=0.00, generation=1279365.9k MWh) <br>
+$60/MWh cap → onshore wind turbine (score=1.000, cost=30.01, CO₂=0.00, generation=1279365.9k MWh) <br>
+$80/MWh cap → onshore wind turbine (score=1.000, cost=30.01, CO₂=0.00, generation=1279365.9k MWh) <br>
+$100/MWh cap → onshore wind turbine (score=0.841, cost=30.01, CO₂=0.00, generation=1279365.9k MWh) <br>
 
 ### Scenario 3 - Business or industrial case
 Description: Find the optimal energy source selection for the specific consumption needs <br>
