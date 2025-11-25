@@ -180,7 +180,7 @@ myPie <- critWeight %>%
   mutate(label = c("Cost", "CO2 Intensity", "Thermal Efficiency", "CtoE Ratio"))
 
 # Pie chart for criteria weights
-ggplot(myPie, aes(x="", y=weight, fill=criterion))+geom_col(width=1)+coord_polar(theta="y")+geom_text(aes(label = label), position = position_stack(vjust = 0.5), size = 10)+theme_void()+theme(legend.position = "none")
+ggplot(myPie, aes(x="", y=weight, fill=criterion))+geom_col(width=1)+coord_polar(theta="y")+geom_text(aes(label = label), position = position_stack(vjust = 0.5), size = 5)+theme_void()+theme(legend.position = "none")
 ```
 
 ```{r}
@@ -188,7 +188,17 @@ ggplot(myPie, aes(x="", y=weight, fill=criterion))+geom_col(width=1)+coord_polar
 enerlong <- py$energy_df %>%
   select(fueltypeid, `Cost ($/MWh)`, `efficiency%`, CO2_Intensity_kg_per_MWh, CtoE_Ratio) %>%
   pivot_longer(-fueltypeid, names_to = "criterion", values_to = "value") %>%
-  group_by(criterion, fueltypeid) %>%
+  mutate(
+    fueltype = case_when(
+      fueltypeid == "WNT" ~ "Wind",
+      fueltypeid == "NUC" ~ "Nuclear",
+      fueltypeid == "NG" ~ "Natural Gas",
+      fueltypeid == "TSN" ~ "Solar",
+      fueltypeid == "COW" ~ "Coal",
+      fueltypeid == "PET" ~ "Petrol",
+    )
+  ) %>%
+  group_by(criterion, fueltype) %>%
   group_modify(~{tibble(value = mean(.x$value, na.rm = TRUE))}) %>%
   ungroup %>%
   left_join(critWeight, by = "criterion")
@@ -220,15 +230,18 @@ weighted <- norm %>%
 
 # find weighted sums
 wsm <- weighted %>%
-  group_by(fueltypeid) %>%
+  group_by(fueltype) %>%
   summarise(WSM_score = sum(weighted), .groups = "drop") %>%
   arrange(desc(WSM_score))
 wsm
 
 # Bar chart showing Normalized Performance Values
-ggplot(norm, aes(x=fueltypeid, y=norm, fill = criterion))+geom_col(position = position_dodge(width = 0.8), width = 0.7)+labs(title = "Normalized Performance Values", x = "Fuel Type ID")+scale_fill_discrete(name = "Performance Value")
+ggplot(norm, aes(x=fueltype, y=norm, fill = criterion))+geom_col(position = position_dodge(width = 0.8), width = 0.7)+labs(title = "Normalized Performance Values", x = "Fuel Type", y = "Normalized Average Values")+scale_fill_discrete(name = "Performance Value")
+
+# Bar chart showing Weighted Performance Values
+ggplot(weighted, aes(x=fueltype, y=weighted, fill = criterion))+geom_col(position = position_dodge(width = 0.8), width = 0.7)+labs(title = "Weighted Performance Values", x = "Fuel Type", y = "Weighted Values")+scale_fill_discrete(name = "Performance Value")
 
 # bar chart showing WSM scores in order
-ggplot(wsm, aes(x=reorder(fueltypeid, -WSM_score), y=WSM_score, fill = fueltypeid))+geom_col()+labs(title = "Final Rankings", x = "Fuel Type ID")+ylim(0, 1)+theme(legend.position = "none")
+ggplot(wsm, aes(x=reorder(fueltype, -WSM_score), y=WSM_score, fill = fueltype))+geom_col()+labs(title = "Final Rankings", x = "Fuel Type", y = "WSM Score")+ylim(0, 1)+theme(legend.position = "none")
 print(norm, n=24)
 ```
